@@ -1,0 +1,6 @@
+[color]
+	ui = auto
+	branch = auto
+	status = auto
+[core]
+	editor = vim
