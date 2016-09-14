@@ -15,6 +15,8 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'mbr0wn/grproject.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'steffanc/cscopemaps.vim'
 
 
 " All of your Plugins must be added before the following line
@@ -49,19 +51,21 @@ set smarttab
 set foldmethod=syntax
 set foldlevelstart=20
 set expandtab
+set cscoperelative
 
+set tags=./tags,./TAGS,tags,TAGS,$CTAGS_FILE
 " Use ctrl-[hjkl] to select the active split!
-nmap <silent> <c-k> :wincmd k<CR>
-nmap <silent> <c-j> :wincmd j<CR>
-nmap <silent> <c-h> :wincmd h<CR>
-nmap <silent> <c-l> :wincmd l<CR>
+"nmap <silent> <c-k> :wincmd k<CR>
+"nmap <silent> <c-j> :wincmd j<CR>
+"nmap <silent> <c-h> :wincmd h<CR>
+"nmap <silent> <c-l> :wincmd l<CR>
 
 set statusline=%{fugitive#statusline()}
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:tmux_navigator_no_mappings = 1
+"let g:tmux_navigator_no_mappings = 1
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -69,3 +73,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
+let g:tagbar_left = 1
+nmap <F8> :TagbarToggle<CR>
