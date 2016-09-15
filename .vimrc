@@ -53,6 +53,9 @@ set foldlevelstart=20
 set expandtab
 set cscoperelative
 
+autocmd Filetype cpp setlocal ts=4 sw=4 noexpandtab
+autocmd Filetype python setlocal ts=4 sw=4 expandtab
+
 set tags=./tags,./TAGS,tags,TAGS,$CTAGS_FILE
 " Use ctrl-[hjkl] to select the active split!
 "nmap <silent> <c-k> :wincmd k<CR>
