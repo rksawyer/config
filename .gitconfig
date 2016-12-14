@@ -4,3 +4,8 @@
 	status = auto
 [core]
 	editor = vim
+[diff]
+	guitool = meld
+	tool = meld
+[difftool]
+	prompt = false
