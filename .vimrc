@@ -53,6 +53,10 @@ set foldlevelstart=20
 set expandtab
 set cscoperelative
 
+"hilight trailing whitespace
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+\%#\@<!$/
+
 autocmd Filetype cpp setlocal ts=4 sw=4 noexpandtab
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
 
