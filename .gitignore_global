@@ -1,0 +1,5 @@
+*.pyc
+*.swp
+*.session
+tags
+cscope.out

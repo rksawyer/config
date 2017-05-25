@@ -4,6 +4,7 @@
 	status = auto
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore_global
 [diff]
 	guitool = meld
 	tool = meld
