@@ -53,6 +53,10 @@ set foldlevelstart=20
 set expandtab
 set cscoperelative
 
+"Display whitespace
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list
+
 "hilight trailing whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+\%#\@<!$/
